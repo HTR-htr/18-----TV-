@@ -31,7 +31,7 @@
             /*width:540px;*/
             height:200px;
             position: absolute;
-            transition: 0.5s;
+            transition: 0.3s;
 
         }
         .imglist>ul>li>img{
@@ -49,7 +49,7 @@
             z-index: 1;
             transform: scale(0.95);
             transform-origin: 0% 100%;
-            animation: li1 0.2 ease;
+            animation: li1 0.3 ease;
         }
         .list2{
             left:50%;
@@ -100,6 +100,14 @@
         }
         #main-arr-l,#main-arr-r:hover{
             color: #ffffff;
+        }
+        .opacity{
+            width: 100%;
+            height:95%;
+            position: absolute;
+            bottom: 0;
+            background-color:rgba(0,0,0,0.5);
+            z-index:2;
         }
 
 
@@ -163,7 +171,19 @@
         </ul>
     </div>
     <div id="mainMain">
-        hahh
+        <div class="content">
+            <div class="imglist">
+                <ul id="list">
+                    <!--<div class="opacity"></div>-->
+                </ul>
+                <div id="main-arr">
+                    <span class="iconfont" id="main-arr-l">&#xe602;</span>
+                    <span class="iconfont" id="main-arr-r">&#xe60f;</span>
+                </div>
+            </div>
+            <div id="lineb" class="lineb">
+            </div>
+        </div>
     </div>
     <div></div>
     <div></div>
@@ -176,23 +196,25 @@
 <script src="jquery-1.12.4.js"></script>
 <script src="common.js"></script>
 <script>
-var nav=my$("nav");
-var navLiList = nav.getElementsByTagName("li");
-var mainMain=document.getElementById("mainMain");
-//抽象相同页面
-    for(let i=0;i<navLiList.length;i++){
-        var navLiliasAList= nav.getElementsByTagName("a");
-        console.log("我最帅");
-               navLiList[i].onclick=function () {
-                var url = navLiliasAList[i].getAttribute("href");
-                $('#mainMain').load(url+' #mainMain>*')
-                return false;
-            }
-    }
+//    var nav=my$("nav");
+//    var navLiList = nav.getElementsByTagName("li");
+//    var mainMain=document.getElementById("mainMain");
+//    //抽象相同页面
+//    for(let i=0;i<navLiList.length;i++){
+//        var navLiliasAList= nav.getElementsByTagName("a");
+//        navLiList[i].onclick=function () {
+//            var url = navLiliasAList[i].getAttribute("href");
+//            $('#mainMain').load(url+' #mainMain>*');
+//            return false;
+//        }
+//    }
+
 </script>
 <script>
     var listElement=document.getElementById('list');
     var linebElement=document.getElementById('lineb');
+    var toleft=document.getElementById("main-arr-l");
+    var toright=document.getElementById("main-arr-r");
     //    var index=0;
     var xhr =new XMLHttpRequest();
     xhr.open('GET','https://easy-mock.com/mock/5cb6e6e3270aa324bd519b60/topview/Carousel');
@@ -235,7 +257,6 @@ var mainMain=document.getElementById("mainMain");
             else if(e.target.parentNode.getAttribute("class")==="list1"){
                 prePic()
             }
-
         });
         var timeID=setInterval(nextPic,5000);
         listElement.onmouseover=function(){
@@ -245,21 +266,25 @@ var mainMain=document.getElementById("mainMain");
                 timeID=setInterval(nextPic,5000);
             }
         };
+        toleft.onclick=function () {
+            prePic();
+        };
+        toright.onclick=function(){
+            nextPic();
+        };
+    };
         function jump() {
             aListName=["list1","list2","list3","list4","list5","list6","list7"];
             for(i=0;i<indexspan1;i++) {
                 aListName.unshift(aListName[6]);//把数组最后一个名字赋值并插入到第一位置来
                 aListName.pop();//删除最后一个值
             }
-
             for(var i=0,len=aLi.length;i<len;i++){
                 aLi[i].setAttribute("class",aListName[i]);
             }
             index=indexspan1-1;
             setLineBColor();
         }
-
-
         function setLineBColor(){
             for(var i=0,len=aSpan.length;i<len;i++){
 //            因为访问数组长度很浪费资源，所以将数组的长度存起来
@@ -290,7 +315,7 @@ var mainMain=document.getElementById("mainMain");
                 index=6;
             }
             setLineBColor();
-        }}
+        }
 
 
 </script>

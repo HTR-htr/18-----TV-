@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="screen"></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    var divElement=document.getElementById("screen")
+    $.post('https://easy-mock.com/mock/5cb6e6e3270aa324bd519b60/topview/Waterfalls',{page:1},function (res) {
+        console.log(res)
+
+        var data=res.data
+        console.log(data)
+
+        var list=data.list
+        for(var i=0;i<list.length;i++){
+            var imgElement=document.createElement("img")
+            imgElement.src=list[i]
+            divElement.appendChild(imgElement)
+
+        }
+        console.log(list[1])
+
+//        for(var i=0;i<list.length;i++){
+//            var imgElement=document.createElement("img")
+//            imgElement.src=list
+//
+//        }
+            }
+    )
+</script>
+</body>
+</html>

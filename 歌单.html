@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="common.css">
+    <!--<script src="index.js"></script>-->
+    <style>
+        .slideMusic{
+            width:65px;
+            height:25px;
+            background-color: #f5f5f7;
+            text-align: center;
+            margin-top: 17px;
+            margin-left: 60px;
+            border-radius: 2px;
+            font-size: 10px;
+            line-height: 25px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+        }
+        #hotLabel{
+                display: inline-block;
+                font-size: 13px;
+        }
+        .biaoqian{
+            font-size: 10px;
+            margin-left: 60px;
+            margin-top: 5px;
+        }
+        #hotLabel>li{
+            display: inline-block;
+            font-size: 10px;
+        }
+        #hotLabel>li>a{
+            color:#666666;
+        }
+        .page{
+            margin-top: 75px;
+
+        }
+        .page li{
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            line-height: 24px;
+            text-align: center;
+
+        }
+        .page li:hover{
+            background-color: #ccc;
+        }
+        .content{
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bigBox{
+            width: 18%;
+            flex-shrink: 0;
+            margin:0 1%;
+            float: left;
+        }
+        .imgEle{
+            width:100%;
+            display: inline-block;
+
+        }
+        .row{
+            position: absolute;
+           left:50%;
+            transform: translateX(-50%);
+            display: none;
+
+        }
+        .imgEle>img{
+            width: 100%;
+        }
+        .text{
+            font-size: 10px;
+        }
+        .page{
+            width: 100%;
+            position: relative;
+            height: 22px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-left"><i class="iconfont logo">&#xeaaf;</i>网易云音乐
+        <div class="arrow">
+            <div class="iconfont"><a>&#xe602;</a></div>
+            <div class="iconfont"><a>&#xe60f;</a></div>
+        </div>
+        <div class="search">
+            <input type="text" value="搜索音乐，视频，歌词，电台" class="search1">
+            <a class="iconfont fangda">&#xe600;</a>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="iconfont touxiang"><a class="iconfont">&#xe611;</a><a class="iconfont denglu">未登录&ensp;&#xe68c;</a></div>.
+        <ul class="personal">
+            <li><a href="" class="iconfont">&#xe613;</a></li>
+            <li><a href="" class="iconfont">&#xe633;</a></li>
+            <li><a href="" class="iconfont">&#xe649;</a></li>
+        </ul>
+        <ul class="setting">
+            <li class="iconfont">&#xe609;</li>
+            <li class="iconfont">&#xe6c5;</li>
+            <li class="iconfont">&#xe61f;</li>
+            <li class="iconfont">&#xe642;</li>
+        </ul>
+    </div>
+</header>
+<nav>
+    <p>推荐</p>
+    <ul class="tuijian">
+        <li><i class="iconfont" >&#xe639;</i>发现音乐</li>
+        <li><i class="iconfont">&#xe62b;</i>私人FM</li>
+        <li><i class="iconfont">&#xe610;</i>视频</li>
+        <li><i class="iconfont">&#xe64b;</i>朋友</li>
+    </ul>
+    <p>我的音乐</p>
+    <ul>
+        <li><i class="iconfont">&#xe65e;</i>本地音乐</li>
+        <li><i class="iconfont">&#xe651;</i>下载管理</li>
+    </ul>
+    <p>创建的歌单</p>
+    <ul>
+        <li><i class="iconfont">&#xe671;</i>我喜欢的音乐</li>
+    </ul>
+</nav>
+<main>
+    <div class="main-nav">
+        <ul>
+            <li><a>个性推荐</a></li>
+            <li><a href="歌单.html">歌单</a></li>
+            <li><a href="主播电台.html">主播电台</a></li>
+            <li><a href="排行榜.html">排行榜</a></li>
+            <li><a href="歌手.html">歌手</a></li>
+            <li><a href="最新音乐.html">最新音乐</a></li>
+        </ul>
+    </div>
+    <div id="mainMain">
+        <div class="slideMusic">轻音乐</div>
+        <div><span class="biaoqian">热门标签:</span>
+            <ul id="hotLabel">
+                <li><a href="">华语</a></li>
+                <li><a href="">流行</a></li>
+                <li><a href="">摇滚</a></li>
+                <li><a href="">民谣</a></li>
+                <li><a href="">电子</a></li>
+                <li><a href="">轻音乐</a></li>
+                <li><a href="">影视原声</a></li>
+                <li><a href="">ACG</a></li>
+                <li><a href="">怀旧</a></li>
+                <li><a href="">治愈</a></li>
+            </ul>
+        </div>
+            <div class="wrap flex-column">
+            <div class="content flex-column">
+            </div>
+            </div>
+        <div class="page">
+            <ul class="row">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+</main>
+<script src="jquery-1.12.4.js"></script>
+<script></script>
+<script>
+    var url="https://easy-mock.com/mock/5cb6e6e3270aa324bd519b60/topview/pagination";
+    var page=1;
+    var oCon=document.querySelector(".content");
+//    var aLi1=document.querySelectorAll(".page>ul li");//分页按钮
+    var oUl=document.querySelector('.page>ul');
+    var cache={};//缓存池
+    getData(1);
+    pageList();
+    function pageList(){
+
+        oUl.addEventListener('click',function (e) {
+            if (e.target.tagName.toLocaleLowerCase() === 'li') {
+                //如果page能在cache中找到，就直接渲染数据
+                page = e.target.innerText;
+                if (page in cache) {
+                    console.log('数据已缓存' + page);
+                    console.log(cache[page]);
+                    render(cache);
+                }
+//                page = e.target.innerText;
+                getData(page);
+            }
+            else {
+                //如果找不到，就进行数据获取
+                getData(page);
+            }
+            page = e.target.innerHTML;
+            getData(page);
+        } )}
+//        for(var i=0,len=aLi1.length;i<len;i++){//光速完成
+////            aLi1[i].index=i;
+//            //让i创建副本，自定义属性
+////            ( function(i){
+////            aLi1[i].onclick=function(){//延迟出发函数
+////                //点击li获取li对应页码;
+////                console.log(i);
+////            }})(i)
+//        }
+    function getData(page){//获取数据
+//        var form=new FormData();
+//        form.append(page,page);利用form表单提交不成功
+        $.ajax({
+            type: "POST",
+            dataType: 'json',
+            async:true,
+            data:{page,page},
+//            processData:false,
+            url: url,
+//            contentType:false,
+            success: function(res){
+                console.log(res);
+
+                var data=res.data;
+                var dataPost=data;
+                cache[page]=dataPost;//预存数据
+                render(data);//执行渲染
+                oUl.style.display="block";
+            }
+        });
+    }
+    function render(dataList){//利用数组循环渲染
+        var str='';
+        for(var i=0,len=dataList.length;i<len;i++){
+            console.log(dataList[i].url);
+            str+=`<div class="bigBox">
+                    <a href="" class="imgEle"><img src="${dataList[i].url}" alt=""></a>
+                    <div class="text">${dataList[i].text}</div>
+                    </div>`;
+        }
+    oCon.innerHTML=str;
+    }
+
+
+</script>
+</body>
+</html>

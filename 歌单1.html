@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="common.css">
+    <!--<script src="index.js"></script>-->
     <style>
-        body{
-            min-width: 800px;
-        }
         .slideMusic{
             width:65px;
             height:25px;
@@ -23,8 +21,8 @@
             border: 1px solid #cccccc;
         }
         #hotLabel{
-                display: inline-block;
-                font-size: 13px;
+            display: inline-block;
+            font-size: 13px;
         }
         .biaoqian{
             font-size: 10px;
@@ -40,8 +38,6 @@
         }
         .page{
             margin-top: 75px;
-
-
         }
         .page li{
             width: 24px;
@@ -49,10 +45,15 @@
             display: inline-block;
             line-height: 24px;
             text-align: center;
-
         }
         .page li:hover{
             background-color: #ccc;
+        }
+        .content{
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
         }
         .bigBox{
             width: 18%;
@@ -63,14 +64,12 @@
         .imgEle{
             width:100%;
             display: inline-block;
-
         }
         .row{
             position: absolute;
-           left:50%;
+            left:50%;
             transform: translateX(-50%);
             display: none;
-
         }
         .imgEle>img{
             width: 100%;
@@ -82,9 +81,7 @@
             width: 100%;
             position: relative;
             height: 22px;
-            top: 375px;
         }
-
     </style>
 </head>
 <body>
@@ -135,34 +132,34 @@
 <main>
     <div class="main-nav">
         <ul>
-            <li><a href="个性推荐.html">个性推荐</a></li>
+            <li><a>个性推荐</a></li>
             <li><a href="歌单.html">歌单</a></li>
-            <li><a href="主播电台.html" onclick="return false">主播电台</a></li>
-            <li><a href="排行榜.html" onclick="return false">排行榜</a></li>
+            <li><a href="主播电台.html">主播电台</a></li>
+            <li><a href="排行榜.html">排行榜</a></li>
             <li><a href="歌手.html">歌手</a></li>
-            <li><a href="最新音乐.html" onclick="return false">最新音乐</a></li>
+            <li><a href="最新音乐.html">最新音乐</a></li>
         </ul>
     </div>
     <div id="mainMain">
         <div class="slideMusic">轻音乐</div>
         <div><span class="biaoqian">热门标签:</span>
             <ul id="hotLabel">
-                <li index="1">华语</li>
-                <li index="2">流行</li>
-                <li index="3">摇滚</li>
-                <li index="4">民谣</li>
-                <li index="5">电子</li>
-                <li index="6">轻音乐</li>
-                <li index="7">影像原声</li>
-                <li index="8">ACG</li>
-                <li index="9">怀旧</li>
-                <li index="10">治愈</li>
+                <li><a href="">华语</a></li>
+                <li><a href="">流行</a></li>
+                <li><a href="">摇滚</a></li>
+                <li><a href="">民谣</a></li>
+                <li><a href="">电子</a></li>
+                <li><a href="">轻音乐</a></li>
+                <li><a href="">影视原声</a></li>
+                <li><a href="">ACG</a></li>
+                <li><a href="">怀旧</a></li>
+                <li><a href="">治愈</a></li>
             </ul>
         </div>
-            <div class="wrap flex-column">
+        <div class="wrap flex-column">
             <div class="content flex-column">
             </div>
-            </div>
+        </div>
         <div class="page">
             <ul class="row">
                 <li>1</li>
@@ -176,11 +173,12 @@
         </div>
 </main>
 <script src="jquery-1.12.4.js"></script>
+<script></script>
 <script>
     var url="https://easy-mock.com/mock/5cb6e6e3270aa324bd519b60/topview/pagination";
     var page=1;
     var oCon=document.querySelector(".content");
-    var aLi1=document.querySelectorAll(".page>ul li");//分页按钮
+    //    var aLi1=document.querySelectorAll(".page>ul li");//分页按钮
     var oUl=document.querySelector('.page>ul');
     var cache={};//缓存池
     getData(1);
@@ -195,15 +193,25 @@
                     console.log(cache[page]);
                     render(cache);
                 }
+//                page = e.target.innerText;
                 getData(page);
             }
             else {
+                //如果找不到，就进行数据获取
                 getData(page);
             }
             page = e.target.innerHTML;
             getData(page);
         } )}
-
+    //        for(var i=0,len=aLi1.length;i<len;i++){//光速完成
+    ////            aLi1[i].index=i;
+    //            //让i创建副本，自定义属性
+    ////            ( function(i){
+    ////            aLi1[i].onclick=function(){//延迟出发函数
+    ////                //点击li获取li对应页码;
+    ////                console.log(i);
+    ////            }})(i)
+    //        }
     function getData(page){//获取数据
 //        var form=new FormData();
 //        form.append(page,page);利用form表单提交不成功
@@ -228,7 +236,7 @@
     function render(dataList){//利用数组循环渲染
         var str='';
         for(var i=0,len=dataList.length;i<len;i++){
-//            console.log(dataList[i].url);
+            console.log(dataList[i].url);
             str+=`<div class="bigBox">
                     <a href="" class="imgEle"><img src="${dataList[i].url}" alt=""></a>
                     <div class="text">${dataList[i].text}</div>
@@ -237,6 +245,5 @@
         oCon.innerHTML=str;
     }
 </script>
-
 </body>
 </html>

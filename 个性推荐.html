@@ -5,117 +5,11 @@
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="common.css">
-    <!--<script src="index.js"></script>-->
-    <style>
-        .content{
-            width:100%;
-            height: 230px;
-            /*background:red;*/
-            margin-top: 13px;
-
-        }
-        .imglist{
-            width:90%;
-            height:200px;
-            margin: 0 auto;
-            position: relative;
-            /*background-color: skyblue;*/
-        }
-        .imglist>ul{
-            width:100%;
-            height:100%;
-            position: relative;
-
-        }
-        .imglist>ul>li{
-            /*width:540px;*/
-            height:200px;
-            position: absolute;
-            transition: 0.3s;
-
-        }
-        .imglist>ul>li>img{
-            height:100%;
-        }
-        .lineb{
-            width:100%;
-            height: 31px;
-            /*background-color: #00ff00;*/
-            text-align: center;
-
-        }
-        .list1{
-            left:0%;
-            z-index: 1;
-            transform: scale(0.95);
-            transform-origin: 0% 100%;
-            animation: li1 0.3 ease;
-        }
-        .list2{
-            left:50%;
-            transform: translate(-50%,0);
-            z-index: 2;
-        }
-        .list3{
-            left:100%;
-            z-index: 1;
-            transform: translate(-100%,0) scale(0.95);
-            transform-origin: 100% 100%;
-
-        }
-        .list4,.list5,.list6,.list7{
-            left:50%;
-            transform: translate(-50%,0) scale(0.95);
-            transform-origin: 100% 100%;
-        }
-        .lineb>span{
-            display: inline-block;
-            width:20px;
-            height: 2px;
-            background-color: #cccccc;
-            text-align: center;
-            margin-left:5px ;
-
-        }
-        .imglist:hover #main-arr{
-            display: block;
-        }
-        #main-arr{
-            position: absolute;
-            top: 50%;
-            transform: translate(0 -50%);
-            z-index:2;
-            width:100%;
-            display: none;
-        }
-        #main-arr-l{
-            float: left;
-            display: block;
-            color: #8c8d8d;
-        }
-        #main-arr-r{
-            float: right;
-            display: block;
-            color: #8c8d8d;
-        }
-        #main-arr-l,#main-arr-r:hover{
-            color: #ffffff;
-        }
-        .opacity{
-            width: 100%;
-            height:95%;
-            position: absolute;
-            bottom: 0;
-            background-color:rgba(0,0,0,0.5);
-            z-index:2;
-        }
-
-
-
-    </style>
+    <link rel="stylesheet" href="个性推荐.css">
 </head>
 <body>
 <header>
+
     <div class="header-left"><i class="iconfont logo">&#xeaaf;</i>网易云音乐
         <div class="arrow">
             <div class="iconfont"><a>&#xe602;</a></div>
@@ -185,7 +79,13 @@
             </div>
         </div>
     </div>
-    <div></div>
+    <div class="tuijiangedan">
+        <div class="data"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <div></div>
     <div></div>
     <div></div>
@@ -195,129 +95,6 @@
 </main>
 <script src="jquery-1.12.4.js"></script>
 <script src="common.js"></script>
-<script>
-//    var nav=my$("nav");
-//    var navLiList = nav.getElementsByTagName("li");
-//    var mainMain=document.getElementById("mainMain");
-//    //抽象相同页面
-//    for(let i=0;i<navLiList.length;i++){
-//        var navLiliasAList= nav.getElementsByTagName("a");
-//        navLiList[i].onclick=function () {
-//            var url = navLiliasAList[i].getAttribute("href");
-//            $('#mainMain').load(url+' #mainMain>*');
-//            return false;
-//        }
-//    }
-
-</script>
-<script>
-    var listElement=document.getElementById('list');
-    var linebElement=document.getElementById('lineb');
-    var toleft=document.getElementById("main-arr-l");
-    var toright=document.getElementById("main-arr-r");
-    //    var index=0;
-    var xhr =new XMLHttpRequest();
-    xhr.open('GET','https://easy-mock.com/mock/5cb6e6e3270aa324bd519b60/topview/Carousel');
-    xhr.send();
-    xhr.onreadystatechange=function(){
-        if(this.readyState!==4) return;
-        var json=JSON.parse(this.response);
-        var data=json.data;
-        for(var i=0,len=data.length;i<len;i++) {
-            //渲染图片
-            var liElement =document.createElement('li');
-            listElement.appendChild(liElement);
-            liElement.className="list"+(i+1);
-            var imgElement= document.createElement('img');
-            imgElement.src=data[i].url;
-            liElement.appendChild(imgElement);
-            var spanElement =document.createElement('span');
-            spanElement.setAttribute("indexspan",(i+1));
-            linebElement.appendChild(spanElement)
-        }
-        var index=0;
-        aSpan=linebElement.querySelectorAll("span");
-        for(var i=0,len=aSpan.length;i<len;i++){
-            aSpan[i].addEventListener("mouseover",function(){
-                indexspan1=this.getAttribute("indexspan");
-                jump()
-            })
-        }
-        aSpan[0].style.backgroundColor="#45c17c";
-        aListName=["list1","list2","list3","list4","list5","list6","list7"];
-        aLi=listElement.querySelectorAll("li");
-        var list1=document.querySelector(".list1");
-        var list3=document.querySelector(".list3");
-        var imgList=document.querySelector(".imglist");
-        imgList.addEventListener("click",function(e){
-            if(e.target.parentNode.getAttribute("class")==="list3")
-            {
-                nextPic();
-            }
-            else if(e.target.parentNode.getAttribute("class")==="list1"){
-                prePic()
-            }
-        });
-        var timeID=setInterval(nextPic,5000);
-        listElement.onmouseover=function(){
-            clearInterval(timeID);
-
-            listElement.onmouseout=function(){
-                timeID=setInterval(nextPic,5000);
-            }
-        };
-        toleft.onclick=function () {
-            prePic();
-        };
-        toright.onclick=function(){
-            nextPic();
-        };
-    };
-        function jump() {
-            aListName=["list1","list2","list3","list4","list5","list6","list7"];
-            for(i=0;i<indexspan1;i++) {
-                aListName.unshift(aListName[6]);//把数组最后一个名字赋值并插入到第一位置来
-                aListName.pop();//删除最后一个值
-            }
-            for(var i=0,len=aLi.length;i<len;i++){
-                aLi[i].setAttribute("class",aListName[i]);
-            }
-            index=indexspan1-1;
-            setLineBColor();
-        }
-        function setLineBColor(){
-            for(var i=0,len=aSpan.length;i<len;i++){
-//            因为访问数组长度很浪费资源，所以将数组的长度存起来
-                aSpan[i].style.background="#ccc";
-            }
-            aSpan[index].style.backgroundColor="#45c17c";
-        }
-        function nextPic(){
-            aListName.unshift(aListName[6]);//把数组最后一个名字赋值并插入到第一位置来
-            aListName.pop();//删除最后一个值
-            for(var i=0,len=aLi.length;i<len;i++){
-                aLi[i].setAttribute("class",aListName[i]);
-            }
-            index=index+1;
-            if(index>6){
-                index=0;
-            }
-            setLineBColor()
-        }
-        function prePic(){
-            aListName.push(aListName[0]);//把第一个值塞到最后一个
-            aListName.shift();//删除第一个值
-            for(var i=0,len=aLi.length;i<len;i++){
-                aLi[i].setAttribute("class",aListName[i]);
-            }
-            index=index-1;
-            if(index<0){
-                index=6;
-            }
-            setLineBColor();
-        }
-
-
-</script>
+<script src="个性推荐.js"></script>
 </body>
 </html>

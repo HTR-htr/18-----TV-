@@ -206,6 +206,7 @@ nav>ul li:hover{
     padding: 0 25px;
     border-bottom:  1px solid #e1e1e2;
     position: relative;
+    position: relative;
 }
 .main-nav ul{
     display: block;
@@ -228,3 +229,350 @@ nav>ul li:hover{
 .main-nav li>a:hover{
     color: #c62f2f;
 }
+ body{
+     /* position: relative; */
+ }
+.big{
+    width: 500px;
+    height: 300px;
+    background: linear-gradient(#957780,#324713);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    z-index:3;
+}
+.biaodan{
+    background-color: rgba(245,244,249,0.1);
+    width: 90%;
+    height: 200px;
+    margin: 12px auto;
+    border-radius: 10px;
+
+}
+.wenzi{
+    color: #ffffff;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 35px;
+}
+form{
+    font-size: 20px;
+}
+form div{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    padding-left:80px;
+    padding-top: 20px;
+
+}
+input{
+    font-size: 18px;
+}
+.shuru{
+    height: 20px;
+    width: 155px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.denglu{
+    background-size:100% 100% ;
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+    height: 30px;
+    width: 100px;
+    margin-top:10px ;
+    display: inline-block;
+}
+.zuce{
+    margin:0 auto;
+    position: absolute;
+    left: 50%;
+    top:80%;
+    transform: translate(-50%,-50%);
+}
+.loging{
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(238,238,238);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:10;
+    display: none;
+}
+
+.form{
+    height: 100px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#denglu{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+#denglu,.pap{
+    outline:none;
+    /*background:transparent;*/
+    border:none;
+    outline:medium;
+}
+.content{
+    width:100%;
+    height: 230px;
+    /*background:red;*/
+    margin-top: 13px;
+
+}
+.imglist{
+    width:90%;
+    height:200px;
+    margin: 0 auto;
+    position: relative;
+    /*background-color: skyblue;*/
+}
+.imglist>ul{
+    width:100%;
+    height:100%;
+    position: relative;
+
+}
+.imglist>ul>li{
+    /*width:540px;*/
+    height:200px;
+    position: absolute;
+    transition: 0.3s;
+
+}
+.imglist>ul>li>img{
+    height:100%;
+}
+.lineb{
+    width:100%;
+    height: 31px;
+    /*background-color: #00ff00;*/
+    text-align: center;
+
+}
+.list1{
+    left:0%;
+    z-index: 1;
+    transform: scale(0.95);
+    transform-origin: 0% 100%;
+    animation: li1 0.3 ease;
+}
+.list2{
+    left:50%;
+    transform: translate(-50%,0);
+    z-index: 2;
+}
+.list3{
+    left:100%;
+    z-index: 1;
+    transform: translate(-100%,0) scale(0.95);
+    transform-origin: 100% 100%;
+
+}
+.list4,.list5,.list6,.list7{
+    left:50%;
+    transform: translate(-50%,0) scale(0.95);
+    transform-origin: 100% 100%;
+}
+.lineb>span{
+    display: inline-block;
+    width:20px;
+    height: 2px;
+    background-color: #cccccc;
+    text-align: center;
+    margin-left:5px ;
+
+}
+.imglist:hover #main-arr{
+    display: block;
+}
+#main-arr{
+    position: absolute;
+    top: 50%;
+    transform: translate(0 -50%);
+    z-index:2;
+    width:100%;
+    display: none;
+}
+#main-arr-l{
+    float: left;
+    display: block;
+    color: #8c8d8d;
+}
+#main-arr-r{
+    float: right;
+    display: block;
+    color: #8c8d8d;
+}
+#main-arr-l,#main-arr-r:hover{
+    color: #ffffff;
+}
+.opacity{
+    width: 100%;
+    height:95%;
+    position: absolute;
+    bottom: 0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:2;
+}
+.tuijiangedan{
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    /*background-color: #a82828;*/
+}
+.data{
+    width: 1000px;
+    color: yellow;
+    height: 50px;
+    float: left;
+}
+.left-ul>li a{
+    text-decoration: none;
+    /*color: #000;*/
+}
+.left-ul{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.left-ul>li{
+    display: inline-block;
+    margin-right:10px ;
+}
+.word{
+    width: 100%;
+    height:350px;
+}
+.comment{
+    float: left;
+    /*background-color: red;*/
+    width: 60%;
+    height: 120px;
+    position: relative;
+}
+.pushComment{
+    width: 90%;
+    height: 25px;
+    box-shadow: 0 0 5px #ccc;
+    position: absolute;
+    left: 50%;
+    top: 29px;
+    transform: translate(-50%,0);
+    box-shadow: 1px 0px 0px 5px rgba(237 246 245 0.9);
+
+}
+.handel{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:40px;
+    background-color:rgb(246,246,246);
+    z-index:9999;
+}
+.handel>ul{
+    position: absolute;
+    top:50%;
+    transform: translate(50%,-50%);
+}
+.handel>ul>li{
+    display: inline-block;
+    background-color: rgb(232,60,60);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    position: relative;
+}
+.handel li>a{
+    text-align: center;
+    line-height: 25px;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.handel>div{
+    position: relative;
+}
+.letfl{
+    font-size: 16px;
+}
+.sumprogress{
+    position: absolute;
+}
+.sum{
+    width:450px;
+    height: 2px;
+    background-color: rgb(230,230,232);
+    position: absolute;
+    left:243px;
+    top: 22px;
+}
+.progress{
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    background-color: rgb(232,60,60);
+}
+.smallround{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 12px;
+    height:12px;
+    border-radius: 50%;
+    background-color: rgb(246,246,246);
+    border: 1px solid rgb(198,198,198);
+    z-index: 1;
+}
+.smallround:hover{
+    box-shadow: 0px 0px 1px 1px;
+}
+.smallround>span{
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(232,60,60);
+    border-radius:50%;
+}
+.current{
+    position: absolute;
+    top:13px;
+    left: 187px;
+}
+.zhongshijian{
+    position: absolute;
+    top: 12px;
+    left: 711px;
+}
+.ting{
+    display: none;
+}
+.fang{
+    display: block;
+    z-index: 1;
+}
+

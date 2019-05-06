@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+   .mainMusic{
+       padding-top: 45px;
+   }
+    .content{
+    width:90%;
+    margin:0 auto;
+    /*background-color: red;*/
+    height: 400px;
+    }
+    .left{
+    width: 40%;
+    /*background-color: green;*/
+    height: 100%;
+    float: left;
+    position: relative;
+    }
+    .right{
+    width:60%;
+    /*background-color: blue;*/
+    height: 100%;
+    float: left;
+    }
+    .biground{
+    width: 300px;
+    height:300px;
+    margin: 30px auto;
+    border-radius: 50%;
+    /*background-color: #000;*/
+    position: relative;
+    }
+    .round{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transform-origin:center center;
+    animation: clockAnimation 60s infinite linear;
+    }
+    <!--@keyframes clockAnimation{
+    from{
+    transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+    transform: translate(-50%,-50%) rotate(360deg);
+    }
+    }
+    .left-ul>li a{
+    text-decoration: none;
+    /*color: #000;*/
+    }
+    .left-ul{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    }
+    .left-ul>li{
+    display: inline-block;
+    margin-right:10px ;
+    }
+    .comment{
+    float: left;
+            /*background-color: red;*/
+    width: 60%;
+    height: 120px;
+    position: relative;
+    }
+    .pushComment{
+        width: 90%;
+        height: 25px;
+        box-shadow: 0 0 5px #ccc;
+        position: absolute;
+        left: 50%;
+        top: 29px;
+        transform: translate(-50%,0);
+        box-shadow: 1px 0px 0px 5px rgba(237 246 245 0.9);
+
+    }
+    .handel{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:40px;
+    background-color:rgb(246,246,246);
+    z-index:9999;
+    }
+    .handel>ul{
+        position: absolute;
+        top:50%;
+        transform: translate(50%,-50%);
+    }
+    .handel>ul>li{
+         display: inline-block;
+        background-color: rgb(232,60,60);
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        line-height: 25px;
+        position: relative;
+    }
+    .handel li>a{
+        text-align: center;
+        line-height: 25px;
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+
+    }
+
+    .handel>div{
+        position: relative;
+    }
+    .letfl{
+        font-size: 16px;
+    }
+        .sumprogress{
+            position: absolute;
+        }
+        .sum{
+            width:450px;
+            height: 2px;
+            background-color: rgb(230,230,232);
+            position: absolute;
+            left:243px;
+            top: 22px;
+        }
+        .progress{
+            position: absolute;
+            height: 2px;
+            width: 0px;
+            background-color: rgb(232,60,60);
+        }
+        .smallround{
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 12px;
+            height:12px;
+            border-radius: 50%;
+            background-color: rgb(246,246,246);
+            border: 1px solid rgb(198,198,198);
+            z-index: 1;
+        }
+        .smallround:hover{
+            box-shadow: 0px 0px 1px 1px;
+        }
+        .smallround>span{
+            width: 2px;
+            height: 2px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(232,60,60);
+            border-radius:50%;
+        }
+        .current{
+            position: absolute;
+            top:13px;
+            left: 187px;
+        }
+        .zhongshijian{
+            position: absolute;
+            top: 12px;
+            left: 711px;
+        }
+        .ting{
+            display: none;
+        }
+        .fang{
+            display: block;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-left"><i class="iconfont logo">&#xeaaf;</i>网易云音乐
+        <div class="arrow">
+            <div class="iconfont"><a>&#xe602;</a></div>
+            <div class="iconfont"><a>&#xe60f;</a></div>
+        </div>
+        <div class="search">
+            <input type="text" value="搜索音乐，视频，歌词，电台" class="search1">
+            <a class="iconfont fangda">&#xe600;</a>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="iconfont touxiang"><a class="iconfont">&#xe611;</a><a class="iconfont denglu">未登录&ensp;&#xe68c;</a></div>.
+        <ul class="personal">
+            <li><a href="" class="iconfont">&#xe613;</a></li>
+            <li><a href="" class="iconfont">&#xe633;</a></li>
+            <li><a href="" class="iconfont">&#xe649;</a></li>
+        </ul>
+        <ul class="setting">
+            <li class="iconfont">&#xe609;</li>
+            <li class="iconfont">&#xe6c5;</li>
+            <li class="iconfont">&#xe61f;</li>
+            <li class="iconfont">&#xe642;</li>
+        </ul>
+    </div>
+</header>
+<div class="mainMusic">
+    <div class="content">
+        <div class="left">
+            <div class="biground">
+                <img src="images/e50693e6e9eb7d451c7bb48b1a089ab2_hd (1).jpg" class="round">
+            </div>
+            <ul class="left-ul">
+                <li><a href="#">喜欢</a></li>
+                <li><a href="#">收藏</a></li>
+                <li><a href="#">下载</a></li>
+                <li><a href="#">分享</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <h3>国歌</h3>
+            <div class="word">
+            </div>
+        </div>
+        <div class="comment">
+            <i>听友评论</i><i>已有15912条评论</i>
+            <p>精彩评论</p>
+            <ul class="classcalComent"></ul>
+        </div>
+    </div>
+    <audio src="TFBOYS - 国歌.mp3" id="audio" preload="auto"></audio>
+    <div class="handel">
+        <ul>
+            <li><a href="" class="iconfont letfl" onclick="return false">&#xe614;</a></li>
+            <li class="play">
+                <!--<a href="" class="iconfont thisplay ting " onclick="return false">&#xe717;</a>-->
+                <a href="" class="iconfont thisplay fang" onclick="return false">&#xe717;</a>
+            </li>
+            <li><a href="" class="iconfont" onclick="return false">&#xe677;</a></li>
+        </ul>
+        <div class="sumprogress">
+            <span class="current">00:00</span>
+            <span class="sum">
+                <span class="smallround">
+                    <span></span>
+                </span>
+                <span class="progress"></span>
+            </span>
+            <span class="zhongshijian">00:00</span>
+        </div>
+    </div>
+</div>
+<script src="歌词3.js"></script>
+<script>
+
+    //获取元素
+    //点击播放暂停
+    init();
+    var onOff=true;
+    var str ='';
+//    var totaltime=0;
+//    console.log(totaltime);
+    $('.play')[0].onclick=function () {
+        if(onOff){
+        $('#audio').play();
+//            console.log($(".fang"));
+            $(".fang")[0].innerHTML="&#xe60e;";
+            onOff=false;
+            timeId=setInterval(ProgressTime,1000);
+        }//点击播放
+        else {
+            $('#audio').pause();
+            $(".fang")[0].innerHTML="&#xe717;";
+            onOff=true;
+            clearInterval(timeId);
+        }
+    };
+
+    //初始化页面
+//var str ='';
+    function init(){
+        var g=songData[0].songLyrics.split('[');
+        console.log(g);
+        g.forEach(function(current){
+            var h=current.split(']');
+            var lyrics=h[1];
+            console.log(lyrics);
+            if(lyrics){
+                str+='<p>'+lyrics+'</p>';
+            }
+            $('.word')[0].innerHTML=str;
+        });
+    }
+
+function ProgressTime(){
+    var n=$('#audio').currentTime/$('#audio').duration;
+    console.log(n);
+    $(".smallround")[0].style.marginLeft=~~(n*$('.sum')[0].offsetWidth)+"px";
+    $(".progress")[0].style.width=n*$('.sum')[0].offsetWidth+"px";
+    console.log($(".smallround")[0].style.marginLeft);
+}
+    function $(selector){
+        if(selector.substring(0,1)=="."){
+            return document.getElementsByClassName(selector.substring(1));
+        }else{
+            return document.getElementById(selector.substring(1));
+        }
+    }
+    $(".smallround")[0].onmousedown=function(e) {
+        document.onmousemove = function (e) {
+            var x = e.clientX;//距离左边的宽度,e要做兼容？此处的e代表什么
+            console.log(x);
+            console.log(x);
+            var a = x - $(".smallround")[0].offsetParent.offsetLeft - $(".smallround")[0].offsetWidth / 2;
+            console.log($(".smallround")[0].offsetParent.offsetLeft );
+            $(".smallround")[0].style.marginLeft = a + "px";
+            $(".progress")[0].style.width = a + "px";
+            var b = parseInt(getComputedStyle($(".smallround")[0]).marginLeft)/$(".smallround")[0].offsetWidth;
+            var c=b*$("#audio").duration;
+            console.log(b);
+            $('#audio').currentTime=c;
+            ProgressTime();
+        };
+    document.onmouseup=function(){
+        this.onmousedown=null;
+        this.onmousemove=null;
+    }
+    };
+</script>
+</body>
+</html>

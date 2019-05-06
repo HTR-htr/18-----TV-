@@ -239,7 +239,7 @@
             <ul class="classcalComent"></ul>
         </div>
     </div>
-    <audio src="TFBOYS - 国歌.mp3" id="audio" preload="auto"></audio>
+    <audio src="国歌.mp3" id="audio" preload="auto"></audio>
     <div class="handel">
         <ul>
             <li><a href="" class="iconfont letfl" onclick="return false">&#xe614;</a></li>
@@ -261,6 +261,7 @@
         </div>
     </div>
 </div>
+<!-- <script src="国歌.mp3"></script> -->
 <script src="歌词3.js"></script>
 <script>
 
@@ -289,12 +290,15 @@
 
     //初始化页面
 //var str ='';
-    var m=0;
+    var index=0;
     $('#audio').addEventListener('timeupdate',function () {
-        console.log(this.currentTime);
         var cur =parseInt(this.currentTime);
         if(document.getElementById('s'+cur)){
-            document.getElementById('s'+m).style.cssText='color:#666;';
+			var y=document.getElementsByClassName("word");
+			var z=y[0].getElementsByTagName("p");
+			for(i=0;i<z.length;i++){
+				z[i].style.cssText='#000;';
+			}
             document.getElementById('s'+cur).style.cssText='color:red;';
 
         }
@@ -305,12 +309,12 @@
         g.forEach(function(current){
             var h=current.split(']');
             var lyrics=h[1];
-            var b=h[0].split('.');
-            var n=b[0].split(':');
+            var q=h[0].split('.');
+            var n=q[0].split(':');
             var time=n[0]*60+parseInt(n[1]);
-            console.log(lyrics);
+            console.log(time);
             if(lyrics){
-                str+='<p id="s'+time+'">'+lyrics+'</p>';
+                str+=`<p id="s${time}">${lyrics}</p>`;
             }
             $('.word')[0].innerHTML=str;
         });

@@ -271,33 +271,46 @@
     var str ='';
 //    var totaltime=0;
 //    console.log(totaltime);
-    $('.play')[0].onclick=function () {
-        if(onOff){
-        $('#audio').play();
-//            console.log($(".fang"));
-            $(".fang")[0].innerHTML="&#xe60e;";
-            onOff=false;
-            timeId=setInterval(ProgressTime,1000);
-        }//点击播放
-        else {
-            $('#audio').pause();
-            $(".fang")[0].innerHTML="&#xe717;";
-            onOff=true;
-            clearInterval(timeId);
-        }
-    };
+//    $('.play')[0].onclick=function () {
+//        if(onOff){
+//        $('#audio').play();
+////            console.log($(".fang"));
+//            $(".fang")[0].innerHTML="&#xe60e;";
+//            onOff=false;
+//            timeId=setInterval(ProgressTime,1000);
+//        }//点击播放
+//        else {
+//            $('#audio').pause();
+//            $(".fang")[0].innerHTML="&#xe717;";
+//            onOff=true;
+//            clearInterval(timeId);
+//        }
+//    };
 
     //初始化页面
 //var str ='';
+    var m=0;
+    $('#audio').addEventListener('timeupdate',function () {
+        console.log(this.currentTime);
+        var cur =parseInt(this.currentTime);
+        if(document.getElementById('s'+cur)){
+            document.getElementById('s'+m).style.cssText='color:#666;';
+            document.getElementById('s'+cur).style.cssText='color:red;';
+
+        }
+    });
     function init(){
         var g=songData[0].songLyrics.split('[');
         console.log(g);
         g.forEach(function(current){
             var h=current.split(']');
             var lyrics=h[1];
+            var b=h[0].split('.');
+            var n=b[0].split(':');
+            var time=n[0]*60+parseInt(n[1]);
             console.log(lyrics);
             if(lyrics){
-                str+='<p>'+lyrics+'</p>';
+                str+='<p id="s'+time+'">'+lyrics+'</p>';
             }
             $('.word')[0].innerHTML=str;
         });
@@ -332,10 +345,28 @@ function ProgressTime(){
             $('#audio').currentTime=c;
             ProgressTime();
         };
+
+
+
     document.onmouseup=function(){
         this.onmousedown=null;
         this.onmousemove=null;
     }
+    };
+    $('.play')[0].onclick=function () {
+        if(onOff){
+            $('#audio').play();
+//            console.log($(".fang"));
+            $(".fang")[0].innerHTML="&#xe60e;";
+            onOff=false;
+            timeId=setInterval(ProgressTime,1000);
+        }//点击播放
+        else {
+            $('#audio').pause();
+            $(".fang")[0].innerHTML="&#xe717;";
+            onOff=true;
+            clearInterval(timeId);
+        }
     };
 </script>
 </body>

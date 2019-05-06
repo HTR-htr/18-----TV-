@@ -2,34 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77025114-1a16-42c2-b643-d2977d893272" name="默认" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/insex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/个性推荐.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/个性推荐.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/歌单.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/歌单1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/歌手.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/歌词3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/登录界面.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/网易云播放器.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/18HTRTVTVGD.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/乱搞.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/关于ajax的封装.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/学习区.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/懒加载预览.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/测试.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/测试.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/测试2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/乱七八糟自己胡乱写的/测试区.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/播放界面.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common.css" afterPath="$PROJECT_DIR$/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.css" afterPath="$PROJECT_DIR$/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/个性推荐.html" afterPath="$PROJECT_DIR$/个性推荐.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/歌单.html" afterPath="$PROJECT_DIR$/歌单.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/歌手.html" afterPath="$PROJECT_DIR$/歌手.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/歌词3.js" afterPath="$PROJECT_DIR$/歌词3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/网易云播放器.html" afterPath="$PROJECT_DIR$/网易云播放器.html" />
     </list>
     <ignored path="18-信安-黄添榕的TV二轮.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="网易云播放器.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="网易云播放器.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/网易云播放器.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="263" column="16" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
+            <state relative-caret-position="1089">
+              <caret line="344" column="27" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="27" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -66,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/歌词3.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -77,8 +53,8 @@
       <file leaf-file-name="个性推荐.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/个性推荐.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="-211">
+              <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -99,12 +75,12 @@
       <file leaf-file-name="歌单.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/歌单.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="220" column="34" selection-start-line="220" selection-start-column="34" selection-end-line="220" selection-end-column="34" />
+            <state relative-caret-position="-572">
+              <caret line="191" column="19" selection-start-line="191" selection-start-column="19" selection-end-line="191" selection-end-column="19" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#2;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1557132285554" expanded="true" signature="6696:6875" placeholder="..." />
+                <marker date="1557135714966" expanded="true" signature="6895:7074" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -122,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8588">
+            <state relative-caret-position="1976">
               <caret line="524" column="16" selection-start-line="524" selection-start-column="16" selection-end-line="524" selection-end-column="16" />
               <folding />
             </state>
@@ -186,14 +162,14 @@
         <option value="$PROJECT_DIR$/../杂/播放器.html" />
         <option value="$PROJECT_DIR$/歌单1.html" />
         <option value="$PROJECT_DIR$/个性推荐.html" />
-        <option value="$PROJECT_DIR$/index.css" />
         <option value="$PROJECT_DIR$/歌词.js" />
         <option value="$PROJECT_DIR$/歌词1.json" />
         <option value="$PROJECT_DIR$/歌词2.js" />
+        <option value="$PROJECT_DIR$/歌单.js" />
+        <option value="$PROJECT_DIR$/index.css" />
+        <option value="$PROJECT_DIR$/歌单.html" />
         <option value="$PROJECT_DIR$/歌词3.js" />
         <option value="$PROJECT_DIR$/网易云播放器.html" />
-        <option value="$PROJECT_DIR$/歌单.js" />
-        <option value="$PROJECT_DIR$/歌单.html" />
       </list>
     </option>
   </component>
@@ -344,12 +320,12 @@
       <workItem from="1556939710850" duration="21019000" />
       <workItem from="1556978074506" duration="9535000" />
       <workItem from="1557015029523" duration="34898000" />
-      <workItem from="1557124600151" duration="7890000" />
+      <workItem from="1557124600151" duration="11314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219008000" />
+    <option name="totallyTimeSpent" value="222432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
@@ -638,30 +614,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/网易云播放器.html">
+    <entry file="file://$PROJECT_DIR$/歌单.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="263" column="16" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/歌词3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="26">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
+            <marker date="1557133836022" expanded="true" signature="1597:1776" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/个性推荐.html">
+    <entry file="file://$PROJECT_DIR$/歌单1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="1081">
+          <caret line="248" column="7" selection-start-line="248" selection-start-column="7" selection-end-line="248" selection-end-column="7" />
+          <folding>
+            <marker date="1557133836024" expanded="true" signature="7188:7367" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../杂/播放器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4712">
+          <caret line="248" column="7" selection-start-line="248" selection-start-column="7" selection-end-line="248" selection-end-column="7" />
+          <folding>
+            <marker date="1557129639445" expanded="true" signature="7188:7367" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1976">
+          <caret line="524" column="16" selection-start-line="524" selection-start-column="16" selection-end-line="524" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3382">
+          <caret line="178" column="2" selection-start-line="178" selection-start-column="2" selection-end-line="178" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -676,70 +679,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/歌单.js">
+    <entry file="file://$PROJECT_DIR$/个性推荐.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <marker date="1557132285586" expanded="true" signature="1597:1776" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/歌单1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="248" column="7" selection-start-line="248" selection-start-column="7" selection-end-line="248" selection-end-column="7" />
-          <folding>
-            <marker date="1557129716769" expanded="true" signature="7188:7367" placeholder="..." />
-          </folding>
+        <state relative-caret-position="-211">
+          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/歌单.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="220" column="34" selection-start-line="220" selection-start-column="34" selection-end-line="220" selection-end-column="34" />
+        <state relative-caret-position="-572">
+          <caret line="191" column="19" selection-start-line="191" selection-start-column="19" selection-end-line="191" selection-end-column="19" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#2;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1557132285554" expanded="true" signature="6696:6875" placeholder="..." />
+            <marker date="1557135714966" expanded="true" signature="6895:7074" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../杂/播放器.html">
+    <entry file="file://$PROJECT_DIR$/歌词3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4712">
-          <caret line="248" column="7" selection-start-line="248" selection-start-column="7" selection-end-line="248" selection-end-column="7" />
+        <state relative-caret-position="19">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
           <folding>
-            <marker date="1557129639445" expanded="true" signature="7188:7367" placeholder="..." />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/网易云播放器.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3382">
-          <caret line="178" column="2" selection-start-line="178" selection-start-column="2" selection-end-line="178" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8588">
-          <caret line="524" column="16" selection-start-line="524" selection-start-column="16" selection-end-line="524" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="1089">
+          <caret line="344" column="27" selection-start-line="344" selection-start-column="24" selection-end-line="344" selection-end-column="27" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -185,6 +185,13 @@
     var cache={};//缓存池
     getData(1);
     pageList();
+    var hot=document.getElementById("hotLabel");
+    hot.onclick=function(e){
+        var a=e.target.getAttribute('index');
+        if(a>5){a=a-3;};
+        getData(a);
+    }
+    console.log(hot);
     function pageList(){
         oUl.addEventListener('click',function (e) {
             if (e.target.tagName.toLocaleLowerCase() === 'li') {
@@ -221,7 +228,7 @@
                 var dataPost=data;
                 cache[page]=dataPost;//预存数据
                 render(data);//执行渲染
-                oUl.style.display="block";
+//                oUl.style.display="block";
             }
         });
     }

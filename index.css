@@ -474,7 +474,6 @@ input{
     top: 29px;
     transform: translate(-50%,0);
     box-shadow: 1px 0px 0px 5px rgba(237 246 245 0.9);
-
 }
 .handel{
     position:fixed;
@@ -574,5 +573,30 @@ input{
 .fang{
     display: block;
     z-index: 1;
+}
+.tuijiangedan>div{
+    width: 18%;
+    background-color: #ccc;
+    height: 100px;
+    float: left;
+}
+.tuijiangedan>div{
+    color: #ffffff;
+    margin: 1% 1%;
+}
+.toptop{
+    width: 100%;
+    height: 20%;
+    font-size: 20px;
+    text-align: center;
+    padding-top:10px ;
+}
+.buttom{
+    width: 100%;
+    height: 80%;
+    font-size: 40px;
+    text-align: center;
+    padding-top:20px ;
+    color: #c62f2f;
 }
 

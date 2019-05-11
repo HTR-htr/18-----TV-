@@ -5,13 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="common.css">
-    <!-- <link rel="stylesheet" href="个性推荐.css"> -->
 	<style type="text/css">
-	/* 	.data{
-			width: 100px;
-			height: 200px;
-			background-color: aqua;
-		} */
 		.tuijiangedan>div{
 			width: 18%;
 			background-color: #ccc;
@@ -90,7 +84,7 @@
     <div class="main-nav">
         <ul id="nav">
             <li><a href="个性推荐.html">个性推荐</a></li>
-            <li><a href="歌单.html">歌单</a></li>
+            <li><a href="歌单.html" >歌单</a></li>
             <li><a href="主播电台.html">主播电台</a></li>
             <li><a href="排行榜.html">排行榜</a></li>
             <li><a href="歌手.html">歌手</a></li>
@@ -101,7 +95,6 @@
         <div class="content">
             <div class="imglist">
                 <ul id="list">
-                    <!--<div class="opacity"></div>-->
                 </ul>
                 <div id="main-arr">
                     <span class="iconfont" id="main-arr-l">&#xe602;</span>
@@ -130,7 +123,6 @@
         <div></div>
         <div></div>
         <div></div>
-		
     </div>
     <div></div>
     <div></div>
@@ -143,16 +135,12 @@
 <script src="common.js"></script>
 <script src="个性推荐.js"></script>
 <script>
-	window.onload=function(){
-		var top=document.getElementsByClassName("toptop")[0];
-		console.log(top);
-		var buttom=document.getElementsByClassName("buttom")[0];
+		var tap=document.getElementsByClassName("toptop");
+		var bottle=document.getElementsByClassName("buttom");
 		var date=new Date();
-		var arr=["星期日","星期一","星期二","星期三","星期四","星期五","星期六",]
-		top.innerHTML=arr[date.getDate()];
-		bottom.innerHTML=date.getDate();
-		
-	}
+		var arr=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		tap[0].innerText=arr[date.getDay()];
+		bottle[0].innerHTML=date.getDate();
 </script>
 </body>
 </html>

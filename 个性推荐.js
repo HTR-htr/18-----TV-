@@ -106,3 +106,11 @@ function prePic(){
     }
     setLineBColor();
 }
+window.onload=function(){
+    var tap=document.getElementsByClassName("toptop");
+    var bottle=document.getElementsByClassName("buttom");
+    var date=new Date();
+    var arr=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    tap[0].innerHTML=arr[date.getDay()];
+    bottle[0].innerHTML=date.getDate();
+};
